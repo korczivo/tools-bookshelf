@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffc602f8-74c2-48a0-adfe-b76239c7d4da" name="Default Changelist" comment="" />
+    <list default="true" id="ffc602f8-74c2-48a0-adfe-b76239c7d4da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/auth/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/common/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/common/status.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/common/common.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/common/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jgXSgECjFIFZSH7xtuTCXMBUgg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -24,7 +42,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -42,33 +60,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604226709680</updated>
-      <workItem from="1604226711627" duration="20594000" />
+      <workItem from="1604226711627" duration="28603000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="-1229" y="340" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604350238278">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1229" y="340" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604350238278" />
-    <state x="2427" y="298" key="SettingsEditor" timestamp="1604335434158">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="-1550" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1604606851875">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1550" y="263" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604606851875" />
+    <state x="-1323" y="190" key="SettingsEditor" timestamp="1604600318175">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1323" y="190" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604600318175" />
     <state x="2427" y="298" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1604335434158" />
-    <state x="537" y="264" width="605" height="522" key="find.popup" timestamp="1604235957678">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604609415677">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604609415677" />
+    <state x="-1306" y="272" width="692" height="537" key="find.popup" timestamp="1604606720032">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1306" y="272" width="692" height="537" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604606720032" />
     <state x="537" y="264" width="605" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604235957678" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1604435845871">
+    <state width="600" height="440" key="javadoc.popup" timestamp="1604609853873">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604435845871" />
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1604429889089">
+    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604609853873" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1604600915383">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604429889089" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604600915383" />
   </component>
 </project>

@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffc602f8-74c2-48a0-adfe-b76239c7d4da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/auth/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/auth/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/common/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/common/status.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/common/common.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/common/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604226709680</updated>
-      <workItem from="1604226711627" duration="28603000" />
+      <workItem from="1604226711627" duration="28703000" />
     </task>
     <servers />
   </component>
@@ -99,9 +83,9 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604609853873" />
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1604600915383">
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1604610247135">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604600915383" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604610247135" />
   </component>
 </project>

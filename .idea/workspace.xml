@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ffc602f8-74c2-48a0-adfe-b76239c7d4da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604226709680</updated>
-      <workItem from="1604226711627" duration="28703000" />
+      <workItem from="1604226711627" duration="28845000" />
     </task>
     <servers />
   </component>
@@ -65,6 +67,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1550" y="263" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604606851875" />
+    <state x="-1222" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604610281327">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1222" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604610281327" />
     <state x="-1323" y="190" key="SettingsEditor" timestamp="1604600318175">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>

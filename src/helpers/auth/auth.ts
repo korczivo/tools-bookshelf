@@ -1,7 +1,7 @@
+import env from '../../env';
+
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-
-import env from '../../env';
 
 import { ComparePassword } from '../../interfaces/user';
 
@@ -10,7 +10,7 @@ const generateToken = (id: number) => {
     {
       user_id: id,
     },
-    env.bcrypt_secret,
+    env.secret,
     { expiresIn: '3d' },
   );
 

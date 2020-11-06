@@ -1,39 +1,48 @@
-import express, { Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 
-import { createUserService } from '../../services/auth';
-
+import { createUserService, loginService } from '../../services/auth';
 import { hashPassword } from '../../helpers/auth';
-import { userValidSchema } from '../../helpers/validator';
+import { Login, User } from '../../interfaces/user';
 
-import { User } from '../../interfaces/user';
+const createUser = async (req: Request, res: Response) => {
+  const { email, password, name }: User = req.body;
 
-const authController = express.Router();
+  const errors = validationResult(req);
 
-authController.post(
-  '/auth/register',
-  userValidSchema,
-  async (req: Request, res: Response) => {
-    const { email, password, name }: User = req.body;
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
 
-    const errors = validationResult(req);
+  const hashedPassword = hashPassword(password);
 
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
+  const user = {
+    email,
+    name,
+    password: hashedPassword,
+  };
 
-    const hashedPassword = hashPassword(password);
+  const { response, status } = await createUserService(user);
 
-    const user = {
-      email,
-      name,
-      password: hashedPassword,
-    };
+  return res.status(status).send(response);
+};
 
-    const { response, status } = await createUserService(user);
+const login = async (req: Request, res: Response) => {
+  const { email, password }: Login = req.body;
 
-    return res.status(status).send(response);
-  },
-);
+  const errors = validationResult(req);
 
-export { authController };
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  const user = {
+    email,
+    password,
+  };
+
+  const { response, status } = await loginService(user);
+
+  return res.status(status).send(response);
+};
+
+export { createUser, login };

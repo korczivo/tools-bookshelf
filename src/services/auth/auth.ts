@@ -29,7 +29,6 @@ const createUserService = async (user: User): Promise<Service> => {
 
     return {
       response: {
-        status: 'success',
         data: createUser,
       },
       status: status.success,
@@ -79,7 +78,6 @@ const loginService = async (user: Login): Promise<Service> => {
 
     return {
       response: {
-        status: 'success',
         data: token,
       },
       status: status.success,

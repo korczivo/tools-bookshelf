@@ -8,8 +8,20 @@ datasource db {
 }
 
 model users {
-  email    String @unique
-  id       Int    @id @default(autoincrement())
+  email    String  @unique
+  id       Int     @id @default(autoincrement())
   name     String
   password String
+  story    story[]
+}
+
+model story {
+  id          Int       @id @default(autoincrement())
+  title       String
+  created_at  DateTime?
+  owner_id    Int?
+  description String?
+  stars       Int?      @default(0)
+  link        String?
+  users       users?    @relation(fields: [owner_id], references: [id])
 }

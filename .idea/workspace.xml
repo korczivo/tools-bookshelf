@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffc602f8-74c2-48a0-adfe-b76239c7d4da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/middlewares/auth/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/story/isStoryExists.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/story/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/story/story.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/story/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/story/story.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/story.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/story/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/story/story.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +32,14 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TypeScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -56,6 +62,9 @@
       <workItem from="1604226711627" duration="29583000" />
       <workItem from="1604686440953" duration="8881000" />
       <workItem from="1604824420404" duration="3390000" />
+      <workItem from="1604841455325" duration="120000" />
+      <workItem from="1604841584498" duration="74000" />
+      <workItem from="1604858917476" duration="10483000" />
     </task>
     <servers />
   </component>
@@ -68,6 +77,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1105" y="430" key="#ESLint" timestamp="1604839727264">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1105" y="430" key="#ESLint/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604839727264" />
     <state x="-1079" y="383" key="#Notifications" timestamp="1604688402851">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -84,28 +97,45 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1222" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604775262619" />
-    <state x="437" y="323" key="SettingsEditor" timestamp="1604824439153">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-890" y="421" width="400" height="340" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1604859165572">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1421" y="332" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604773501485" />
+    <state x="-890" y="421" width="400" height="340" key="DBNavigator.ConnectionAuthenticationDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604859165572" />
+    <state x="-1372" y="262" key="DBNavigator.DatasetFilterDialog" timestamp="1604859898259">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1372" y="262" key="DBNavigator.DatasetFilterDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604859898259" />
+    <state x="-1283" y="371" key="DBNavigator.DatasetRecordEditorDialog" timestamp="1604859945007">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1283" y="371" key="DBNavigator.DatasetRecordEditorDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604859945007" />
+    <state x="-1198" y="198" key="DBNavigator.ProjectSettingsDialog" timestamp="1604859866078">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1198" y="198" key="DBNavigator.ProjectSettingsDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604859866078" />
+    <state x="-1367" y="77" width="1174" height="861" key="SettingsEditor" timestamp="1604948052731">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1367" y="77" width="1174" height="861" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604948052731" />
     <state x="437" y="323" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1604824439153" />
     <state x="2427" y="298" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1604335434158" />
-    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604694993720">
+    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604952206670">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604694993720" />
-    <state x="-1306" y="272" width="692" height="537" key="find.popup" timestamp="1604784659632">
+    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604952206670" />
+    <state x="-1306" y="272" width="692" height="554" key="find.popup" timestamp="1604949333254">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1306" y="272" width="692" height="537" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604784659632" />
+    <state x="-1306" y="272" width="692" height="554" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604949333254" />
     <state x="537" y="264" width="605" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604235957678" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1604834603541">
+    <state width="600" height="440" key="javadoc.popup" timestamp="1604952207913">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604834603541" />
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1604781217411">
+    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604952207913" />
+    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1604948658386" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1604949470207">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604781217411" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604949470207" />
   </component>
 </project>

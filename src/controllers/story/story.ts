@@ -2,6 +2,17 @@ import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import { storyService } from '../../services/story';
 import { status } from '../../helpers/common';
+import { addLikeServices } from '../../services/story/addLike';
+
+const {
+  getStory,
+  getStories,
+  updateStory,
+  createStory,
+  deleteStory,
+} = storyService;
+
+const { addLike } = addLikeServices;
 
 export const storyController = {
   checkValid: async (req: Request, res: Response) => {
@@ -12,19 +23,17 @@ export const storyController = {
     }
   },
   getStories: async (req: Request, res: Response) => {
-    const { response, status } = await storyService.getStoriesService();
+    const { response, status } = await getStories();
     return res.status(status).send(response);
   },
   getStory: async (req: Request, res: Response) => {
     const { id } = req.params;
-    const item = await storyService.getStory({ id });
+    const item = await getStory({ id });
 
-    return res.status(status.success).send({
-      data: item,
-    });
+    return res.status(status.success).send(item);
   },
   createStory: async (req: Request, res: Response) => {
-    const { title, description, stars, link } = req.body;
+    const { title, description, link } = req.body;
     const { user_id } = res.locals.jwtPayload;
 
     await storyController.checkValid(req, res);
@@ -32,7 +41,6 @@ export const storyController = {
     const story = {
       title,
       description,
-      stars,
       link,
       users: {
         connect: {
@@ -41,12 +49,12 @@ export const storyController = {
       },
     };
 
-    const { response, status } = await storyService.createStoryService(story);
+    const { response, status } = await createStory(story);
 
     return res.status(status).send(response);
   },
   updateStory: async (req: Request, res: Response) => {
-    const { title, description, stars, link } = req.body;
+    const { title, description, link } = req.body;
     const { id } = req.params;
     const { user_id } = res.locals.jwtPayload;
 
@@ -55,7 +63,6 @@ export const storyController = {
     const story = {
       title,
       description,
-      stars,
       link,
       users: {
         connect: {
@@ -64,7 +71,7 @@ export const storyController = {
       },
     };
 
-    const { response, status } = await storyService.updateStoryService({
+    const { response, status } = await updateStory({
       story,
       id,
     });
@@ -74,7 +81,15 @@ export const storyController = {
   deleteStory: async (req: Request, res: Response) => {
     const { id } = req.params;
 
-    const { response, status } = await storyService.deleteStoryService({ id });
+    const { response, status } = await deleteStory({ id });
+
+    return res.status(status).send(response);
+  },
+  addLike: async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { user_id } = res.locals.jwtPayload;
+
+    const { response, status } = await addLike({ id, user_id });
 
     return res.status(status).send(response);
   },

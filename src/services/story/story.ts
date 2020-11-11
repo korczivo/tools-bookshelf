@@ -7,7 +7,7 @@ import { errorMessage, status } from '../../helpers/common';
 const prisma = new PrismaClient();
 
 export const storyService = {
-  getStoriesService: async () => {
+  getStories: async () => {
     try {
       const getStories = await prisma.story.findMany({});
 
@@ -26,7 +26,7 @@ export const storyService = {
       };
     }
   },
-  createStoryService: async (story: Story): Promise<Service> => {
+  createStory: async (story: Story): Promise<Service> => {
     try {
       const createStory = await prisma.story.create({
         data: story,
@@ -46,24 +46,31 @@ export const storyService = {
       };
     }
   },
+  findStory: async ({ id }: StoryBase) => {
+    const item = await prisma.story.findOne({
+      where: {
+        id: parseInt(id),
+      },
+    });
+
+    return item;
+  },
   getStory: async ({ id }: StoryBase) => {
     try {
-      const findStory = await prisma.story.findOne({
-        where: {
-          id: parseInt(id),
-        },
-      });
+      const story = await storyService.findStory({ id });
 
-      if (!findStory) {
+      if (!story) {
         return {
           response: {
-            data: 'Store does not exists.',
+            data: 'Store does not exists',
           },
           status: status.notfound,
         };
       }
 
-      return findStory;
+      return {
+        data: story,
+      };
     } catch (e) {
       errorMessage.data = 'Operation was not successful.';
 
@@ -73,9 +80,18 @@ export const storyService = {
       };
     }
   },
-  updateStoryService: async ({ story, id }: StoryService): Promise<Service> => {
+  updateStory: async ({ story, id }: StoryService): Promise<Service> => {
     try {
-      await storyService.getStory({ id });
+      const getStory = await storyService.findStory({ id });
+
+      if (!getStory) {
+        return {
+          response: {
+            data: 'Store does not exists',
+          },
+          status: status.notfound,
+        };
+      }
 
       const updateStory = await prisma.story.update({
         data: story,
@@ -99,10 +115,19 @@ export const storyService = {
       };
     }
   },
-  deleteStoryService: async ({ id }: StoryBase): Promise<Service> => {
-    await storyService.getStory({ id });
-
+  deleteStory: async ({ id }: StoryBase): Promise<Service> => {
     try {
+      const getStory = await storyService.findStory({ id });
+
+      if (!getStory) {
+        return {
+          response: {
+            data: 'Store does not exists',
+          },
+          status: status.notfound,
+        };
+      }
+
       await prisma.story.delete({
         where: {
           id: parseInt(id),

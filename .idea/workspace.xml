@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffc602f8-74c2-48a0-adfe-b76239c7d4da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/services/story/addLike.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/story/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/story/story.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/validator/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validator/story.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/story/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/story/story.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/story.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/story/story.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/story/story.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,23 +120,23 @@
     <state x="-1367" y="77" width="1174" height="861" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604948052731" />
     <state x="437" y="323" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1604824439153" />
     <state x="2427" y="298" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1604335434158" />
-    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604952206670">
+    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605131406631">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1604952206670" />
-    <state x="-1306" y="272" width="692" height="554" key="find.popup" timestamp="1605045720459">
+    <state x="-1555" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605131406631" />
+    <state x="-1306" y="272" width="692" height="554" key="find.popup" timestamp="1605132812641">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1306" y="272" width="692" height="554" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605045720459" />
+    <state x="-1306" y="272" width="692" height="554" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605132812641" />
     <state x="537" y="264" width="605" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1604235957678" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1605042180569">
+    <state width="600" height="440" key="javadoc.popup" timestamp="1605132256564">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605042180569" />
+    <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605132256564" />
     <state width="600" height="440" key="javadoc.popup/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1604948658386" />
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1605045992884">
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1605129118280">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605045992884" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1605129118280" />
   </component>
 </project>

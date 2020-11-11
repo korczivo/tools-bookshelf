@@ -12,6 +12,7 @@ model users {
   id       Int     @id @default(autoincrement())
   name     String
   password String
+  likes    likes[]
   story    story[]
 }
 
@@ -24,4 +25,13 @@ model story {
   stars       Int?      @default(0)
   link        String?
   users       users?    @relation(fields: [owner_id], references: [id])
+  likes       likes[]
+}
+
+model likes {
+  id       Int    @id @default(autoincrement())
+  user_id  Int?
+  story_id Int?
+  story    story? @relation(fields: [story_id], references: [id])
+  users    users? @relation(fields: [user_id], references: [id])
 }

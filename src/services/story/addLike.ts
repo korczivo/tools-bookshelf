@@ -71,20 +71,9 @@ export const addLikeServices = {
         };
       }
 
-      //TODO you have to remove like object if user tried double like
-      // await prisma.users.update({
-      //   where: { id: parseInt(user_id) },
-      //   data: {
-      //     likes: {
-      //       delete: {
-      //         id: parseInt(user_id),
-      //       },
-      //     },
-      //   },
-      //   include: {
-      //     likes: true,
-      //   },
-      // });
+      const deleteExistingLike = await prisma.$queryRaw(
+        `DELETE FROM LIKES where user_id = ${user_id} AND story_id=${id}`,
+      );
 
       await prisma.story.update({
         data: {

@@ -36,26 +36,15 @@ export const addLikeServices = {
         };
       }
 
-      if (isLiked.length === 0) {
-        await prisma.likes.create({
-          data: {
-            story: {
-              connect: {
-                id: parseInt(id),
-              },
-            },
-            users: {
-              connect: {
-                id: parseInt(user_id),
-              },
-            },
-          },
-        });
+      if (isLiked.length) {
+        await prisma.$queryRaw(
+          `DELETE FROM LIKES where user_id = ${user_id} AND story_id=${id}`,
+        );
 
         await prisma.story.update({
           data: {
             stars: {
-              increment: 1,
+              decrement: 1,
             },
           },
           where: {
@@ -71,14 +60,25 @@ export const addLikeServices = {
         };
       }
 
-      const deleteExistingLike = await prisma.$queryRaw(
-        `DELETE FROM LIKES where user_id = ${user_id} AND story_id=${id}`,
-      );
+      await prisma.likes.create({
+        data: {
+          story: {
+            connect: {
+              id: parseInt(id),
+            },
+          },
+          users: {
+            connect: {
+              id: parseInt(user_id),
+            },
+          },
+        },
+      });
 
       await prisma.story.update({
         data: {
           stars: {
-            decrement: 1,
+            increment: 1,
           },
         },
         where: {

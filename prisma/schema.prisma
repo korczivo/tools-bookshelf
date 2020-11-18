@@ -8,23 +8,25 @@ datasource db {
 }
 
 model users {
-  email    String  @unique
-  id       Int     @id @default(autoincrement())
+  email    String     @unique
+  id       Int        @id @default(autoincrement())
   name     String
   password String
+  comments comments[]
   likes    likes[]
   story    story[]
 }
 
 model story {
-  id          Int       @id @default(autoincrement())
+  id          Int        @id @default(autoincrement())
   title       String
-  created_at  DateTime? @default(now())
+  created_at  DateTime?  @default(now())
   owner_id    Int?
   description String?
-  stars       Int?      @default(0)
+  stars       Int?       @default(0)
   link        String?
-  users       users?    @relation(fields: [owner_id], references: [id])
+  users       users?     @relation(fields: [owner_id], references: [id])
+  comments    comments[]
   likes       likes[]
 }
 
@@ -34,4 +36,14 @@ model likes {
   story_id Int?
   story    story? @relation(fields: [story_id], references: [id])
   users    users? @relation(fields: [user_id], references: [id])
+}
+
+model comments {
+  id         Int       @id @default(autoincrement())
+  user_id    Int?
+  story_id   Int?
+  content    String
+  created_at DateTime? @default(now())
+  story      story?    @relation(fields: [story_id], references: [id])
+  users      users?    @relation(fields: [user_id], references: [id])
 }
